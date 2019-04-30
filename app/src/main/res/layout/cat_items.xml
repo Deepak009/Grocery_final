@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/cover1" />
+
+        <TextView
+            android:layout_below="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/gray_lite"
+            android:gravity="center|start"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:text="Computers &amp; Laptops"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+</RelativeLayout>
