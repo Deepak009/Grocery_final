@@ -2,6 +2,7 @@ package com.example.grocery_final;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -101,12 +102,14 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     public void ViewMore(View view) {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.main_fragment_container, new CategoriesFragment(), "HomeFragment")
+                .replace(R.id.main_fragment_container, new CategoriesFragment(), "CategoriesFragment")
                 .commit();
-       //Toast.makeText(this, "Myfreidn", Toast.LENGTH_SHORT).show();
+
+        //Toast.makeText(this, "Myfreidn", Toast.LENGTH_SHORT).show();
     }
 }
