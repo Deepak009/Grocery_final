@@ -7,28 +7,66 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/viewPager"/>
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp">
-
-
-            <android.support.v4.view.ViewPager
-                android:id="@+id/image_page_slider"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardview"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_centerInParent="true" />
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                card_view:contentPadding="2dp"
+                card_view:cardElevation="7dp"
+                card_view:cardBackgroundColor="#F6F6F7"
+                android:layout_margin="1dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_alignParentLeft="true"
+                            android:id="@+id/title22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Categories"/>
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/title2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View all"/>
 
-            <LinearLayout
-                android:id="@+id/image_page_dots"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_alignParentBottom="true"
-                android:gravity="center"
-                android:orientation="horizontal" />
+                    </RelativeLayout>
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_below="@+id/title22"
+                        android:id="@+id/recyclerview1"
+                        android:scrollbars="horizontal"
+                        android:overScrollMode="never"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
         </RelativeLayout>
 
-        <include layout="@layout/category_layout" />
 
         <RelativeLayout
             android:layout_marginTop="10dp"

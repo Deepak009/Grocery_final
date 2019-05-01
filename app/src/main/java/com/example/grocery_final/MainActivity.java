@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.example.grocery_final.Fragments.CategoriesFragment;
 import com.example.grocery_final.Fragments.HomeFragment;
+import com.example.grocery_final.Fragments.HotFragment;
+import com.example.grocery_final.Fragments.LoginFragment;
 import com.example.grocery_final.Tools.SlideNavigation;
 import com.example.grocery_final.notification.NotificationCountSetClass;
 
@@ -43,10 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.main_fragment_container, new HomeFragment(), "HomeFragment")
+                .replace(R.id.main_fragment_container, new HomeFragment(), "HomeFragment")
                 .commit();
 
-        SlideNavigation slideNavigation = new SlideNavigation(R.id.main_fragment_container);
+        SlideNavigation slideNavigation
+                = new SlideNavigation(R.id.main_fragment_container);
         slideNavigation.initSlideMenu(MainActivity.this, getSupportFragmentManager(), drawerLayout);
     }
 

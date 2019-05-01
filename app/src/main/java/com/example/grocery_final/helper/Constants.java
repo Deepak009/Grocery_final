@@ -14,8 +14,8 @@ public class Constants {
     public static String STARTUP_SCREEN_SF = "startup_screen_sf";
     //public static String URL = "http://192.168.1.202/";
     // public static String URL = "http://192.168.219.2/";
-    public static String URL = "http://192.168.1.222/";
-    public static String SUBFOLDER = "grocery_website/admin/android_process/";
+    public static String URL = "http://192.168.1.5/";
+    public static String SUBFOLDER = "grocery_website/android_process/";
 
 
     //File Naming
@@ -25,7 +25,7 @@ public class Constants {
 
 
    /* //Connection Server Start Here
-    //Log.e("test URl",LOGINCHECK);
+    //Log.e("test URl",LOGINCHECK);]
     ConnectionServer connectionServer = new ConnectionServer();
                 connectionServer.set_url(Check);
                 connectionServer.requestedMethod("POST");
