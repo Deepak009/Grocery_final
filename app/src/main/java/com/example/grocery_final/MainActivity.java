@@ -6,18 +6,30 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewParent;
+import android.widget.Button;
+import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.grocery_final.Adapters.GridProductLayoutAdapter;
+import com.example.grocery_final.Adapters.HorizontalProductScrollModel;
 import com.example.grocery_final.Fragments.CategoriesFragment;
 import com.example.grocery_final.Fragments.HomeFragment;
 import com.example.grocery_final.Fragments.HotFragment;
 import com.example.grocery_final.Fragments.LoginFragment;
 import com.example.grocery_final.Tools.SlideNavigation;
 import com.example.grocery_final.notification.NotificationCountSetClass;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -35,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
         drawerLayout = findViewById(R.id.drawer_layout);
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
@@ -51,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
         SlideNavigation slideNavigation
                 = new SlideNavigation(R.id.main_fragment_container);
         slideNavigation.initSlideMenu(MainActivity.this, getSupportFragmentManager(), drawerLayout);
+
+
     }
 
     @Override
@@ -106,12 +122,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
     public void ViewMore(View view) {
+
+
 
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.main_fragment_container, new CategoriesFragment(), "CategoriesFragment")
                 .commit();
+
 
         //Toast.makeText(this, "Myfreidn", Toast.LENGTH_SHORT).show();
     }

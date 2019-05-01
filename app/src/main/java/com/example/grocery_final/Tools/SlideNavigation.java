@@ -1,6 +1,8 @@
 package com.example.grocery_final.Tools;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -84,12 +86,20 @@ public class SlideNavigation {
         });
 
         category.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceType")
             @Override
             public void onClick(View v) {
+
+
+
+
+
                 drawerLayout.closeDrawer(GravityCompat.START);
                 fragmentManager
+
+
                         .beginTransaction()
-                        .replace(fragmnetholder, new CategoriesFragment(), "CategoriesFragment")
+                        .replace(R.id.main_fragment_container, new CategoriesFragment(), "CategoriesFragment")
                         .addToBackStack("CategoriesFragment")
                         .commit();
 

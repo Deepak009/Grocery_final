@@ -108,10 +108,10 @@ CardView hot_deal;
                     // Showing clicked item value on screen using toast message.
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
 
-                    fragmentManager.beginTransaction().replace(R.id.main_fragment_container, new category_items_fragment(), "CategoriesFragment")
+                    fragmentManager.beginTransaction().replace(R.id.main_fragment_container, new CategoriesFragment(), "CategoriesFragment")
                             .commit();
 
-                    Toast.makeText(getActivity(), Number.get(RecyclerViewItemPosition), Toast.LENGTH_LONG).show();
+
 
                 }
 
